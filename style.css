@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins';
+}
+
+:root{
+    --background: rgb(76, 75, 75);
+    --second-background: rgb(44, 44, 44);
+
+}
+
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2em 15%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: rgba(56, 55, 55, 0.8);
+    backdrop-filter: blur(10px);   /*EFECTO VIDRIO*/
+    z-index: 1000;  /*para qu emi barra de navegación este siempre*/
+
+}
+ul{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    gap:3em;  /*separo el menu entre ellos*/
+}
+
+nav ul a{
+    color: rgb(209, 179, 208);
+    opacity: 0.7; /*Reducir la opacidad para el desplazamiento*/
+    transition: 0.2s ease-in-out; /*transicion para el efecto de desplazamiento*/
+}
+
+nav ul a:hover{
+    opacity: 1;
+}
+.logo{
+    font-size: 2.5em;
+    color: white;
+    font-weight: 800;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+.logo:hover{
+    opacity: 1;
+}
+.btn{
+    padding: 0.5em 1em;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    border: 2px solid white;
+    cursor: pointer; /*hara que cuadno mi cursor pase por encima cambie y asi sabe que es un enlace*/
+    transition: 0.3s ease-in-out;
+
+}
+.btn:hover{
+    background-color: rgb(185, 174, 185);
+    color: var(--background);
+}
+span{
+    background: linear-gradient(to right, #dfb3df,#e2c796);
+    background-clip: text;/*texto al fondo*/
+    color: transparent;  /*asi podremos ver el degradado a traves del texto porque es transparente*/
+}
+
+#menu{
+    color: white;
+    font-size: 3em;
+    display: none;
+
+}
+
+section{
+    min-height: 100vh;
+    padding: 5% 15%;
+
+}
+
+#home{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+    color: white;
+}
+#home img{
+    width: 25vw;
+    border-radius: 50%;
+    
+    
+}
+.info-box h1{
+    font-size: 5em;
+    font-weight: 500;
+    
+}
+.info-box h3{
+    font-size: 2em;
+    font-weight: 400;
+
+}
+.info-box p{
+    opacity: 0.7;
+}
+.btn-box{
+    display: flex;
+    gap:1em;
+    padding-top: 20px;
+}
+.btn-box .btn:nth-of-type(2){
+    background-color: white;
+    color: var(--background);
+}
+.btn-box .btn:nth-of-type(2):hover{
+    background-color: var(--background);
+    color:white;
+}
+
+
+/*SOBRE MI*/
+
+
+#about{
+    
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+    color: white;
+    min-height: 100vh;
+    background-color:  var(--second-background);
+    
+}
+.about-info h1{
+    font-size: 5em;
+    font-weight: 500;
+    
+}
+.about-info p{
+    opacity: 0.7;
+
+}
+
+#about img{
+    width: 25vw;
+    border-radius: 50%;
+    
+    
+}
+
+
+
+::-webkit-scrollbar{
+    width: 20px;
+    background-color: var(--background);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom,#e28dde,#4dbfd3);
+}
+
+
+/*Skills*/
+#skills{
+    min-height: 100vh;
+}
+#skills h1{
+    font-size: 5em;
+    font-weight: 500;
+    text-align: center;
+    
+}
+
+.habilidades {
+    background-color: var(--jet);
+    width: 100%;
+    height: auto;
+    padding-bottom: 8rem;
+    position: relative;
+}  
+
+.habilidades h1 {
+    display: block;
+    text-align: center;
+    color: white;
+    letter-spacing: .1rem;
+    padding: 6rem 0 5rem 0;
+    padding-top: 8rem;
+    font-size: 3rem;
+}
+
+
+.skills-habilidades {
+    display: grid;
+    grid-template-columns: repeat(4, 13rem); /* 4 columnas por defecto */
+    gap: 3rem;
+    justify-content: center;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+/* Estilo para las tarjetas */
+.tarjetaSkills {
+    background-color: rgb(59, 59, 59);
+    border-radius: 54px;
+    border: 2px solid rgb(94, 89, 89);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    filter: saturate(70%); 
+    width: 11rem;
+    height: 10rem;
+}
+
+.tarjetaSkills img {
+    margin-top: .7rem;
+    width: 4rem;
+}
+
+.tarjetaSkills p {
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 1.0rem;
+    margin-bottom: .7rem;
+    margin-top: .8rem;
+}
+
+.tarjetaSkills:hover {
+    filter: saturate(100%);
+    border: 2px solid var(--beaver);
+    transition: all 1s;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    section{
+        padding: 8em 15%;
+
+    }
+    nav.btn{
+        display: none;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1em 3em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0,0,0,0.9);
+        display: none;
+
+    }
+    .links a{
+        margin: 2em 0;
+        display: block;
+        font-size: 1.5em;
+        color: white;
+
+    }
+
+    .links.active{
+        display: block;
+    }
+
+    #home h1{
+        font-size: 4em;
+    }
+    #home h3{
+        font-size: 2em;
+    }
+
+    #home img{
+        width: 24VW;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+
+    #about img{
+        width: 32VW;
+    }
+    #about h1{
+        font-size: 3em;
+    }
+
+    #about ul{
+        font-size: 1em;
+    }
+    .skills-habilidades {
+        grid-template-columns: repeat(3, 13rem); /* Cambia a 3 columnas */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .skills-habilidades {
+        grid-template-columns: repeat(2, 13rem); /* Cambia a 2 columnas */
+    }
+
+    .tarjetaSkills {
+        width: 10rem;
+    }
+
+    .tarjetaSkills img {
+        width: 3.5rem;
+    }
+    #home h1{
+        font-size: 2.5em;
+    }
+    #home h3{
+        font-size: 1.5em;
+    }
+
+    #home img{
+        width: 32VW;
+    }
+
+    #about .skills{
+        gap: 3em;
+    }
+    #contact .header{
+        font-size: 3em;
+    }
+
+    #contact .input-box span{
+        font-size: 1.2em;
+    }
+
+    .input-box input{
+        padding:0.5em 1em ;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 5em;
+        align-items: baseline;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .skills-habilidades {
+        grid-template-columns: 1fr; /* Solo 1 columna en pantallas pequeñas */
+    }
+
+    .tarjetaSkills {
+        width: 9rem;
+        margin-bottom: 15px;
+    }
+
+    .tarjetaSkills img {
+        width: 3rem;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* PROYECTOS */
+#services {
+    background-color: var(--second-background);
+}
+
+.header {
+    text-align: center;
+    font-size: 5em;
+    margin: 0.5em 0;
+}
+
+.services-container {
+    display: flex; /* Cambiado a Flexbox */
+    flex-wrap: wrap; /* Permitir que las cajas se envuelvan */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    gap: 2em; /* Espacio entre las cajas */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centra los elementos dentro de la caja */
+    overflow: hidden;
+    padding: 3em;
+    gap: 2em;
+    color: white;
+    border: 2px solid rgb(66, 65, 65);
+    border-radius: 0.5em;
+    width: 450px; /* Ancho fijo para un mejor control */
+    max-width: 500px; /* Ancho máximo */
+}
+
+.box:hover {
+    border: 3px solid rgb(221, 198, 219);
+}
+
+.box p {
+    opacity: 0.8;
+}
+
+.box h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.box img {
+    padding-top: 10px;
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-height: 200px; /* Ajusta esto según sea necesario */
+    object-fit: cover; /* La imagen se ajusta al contenedor sin deformarse */
+    border-radius: 0.5em;
+}
+
+#services .btn{
+    background-color: rgb(221, 198, 219); /* Color de fondo del botón */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+    margin-top: 10px; /* Espacio arriba del botón */
+}
+
+.btn-box {
+    display: flex; /* Utiliza Flexbox para alinear los botones */
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 1em; /* Espacio entre los botones */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho de la caja */
+}
+
+.btnVer {
+    padding: 0.5em 1em;
+    color: rgb(29, 28, 29); /* Color del texto */
+    background-color: #d3bed3; /* Color de fondo */
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: 0.3s ease-in-out;
+    text-decoration: none; /* Elimina el subrayado */
+    display: inline-flex; /* Hace que se comporte como un botón */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.btnGit {
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.btnGit img {
+    width: 2rem; /* Tamaño del icono en el botón de Git */
+    margin-right: .5rem; /* Espacio entre la imagen y el texto */
+}
+
+#contact{
+    background-color: var(--background);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+form.input-box{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1em;
+
+}
+.info-box span{
+    font-size: 1.5em;
+}
+
+form input{
+    font-size: 1.3em;
+    padding: 1em 5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+}
+
+form input:focus{
+    background: rgb(229,229,229);
+}
+
+#footer{
+    background-color: var(--second-background);
+
+}
+
+.contenidoFooter {
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contenidoFooter img{
+    width: 30px;
+}
+
+.contenidoFooter h3{
+    color: #d3bed3;
+    font-size: 0.9rem;
+    
+}
+.telefono {
+    display: flex;
+    flex-direction: row; /* Pone los íconos y el texto en fila */
+    align-items: center;
+    gap: 1rem; /* Añade espacio entre los íconos y el texto */
+    
+}
+#tel{
+    width: 25px;
+}
+
+
+
