@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector("#menu");
     const nav = document.querySelector(".links");
 
@@ -9,41 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    const form = document.getElementById('contact-form');
 
-    if (form) {
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); 
+    const btn = document.getElementById('button');
 
-            
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-                mode: 'no-cors' 
-            })
-            .then(response => {
-               
-                showToast();
-
-                form.reset(); 
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+    document.getElementById('form')
+     .addEventListener('submit', function(event) {
+       event.preventDefault();
+    
+       btn.value = 'Enviando...';
+    
+       const serviceID = 'default_service';
+       const templateID = 'template_dm0y2ew';
+    
+       emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          btn.value = 'Enviar';
+          alert('Mensaje Enviado Correctamente');
+        }, (err) => {
+          btn.value = 'Enviar';
+          alert(JSON.stringify(err));
         });
-    }
-
-    function showToast() {
-        const toast = document.getElementById('toast');
-        toast.style.display = 'block'; 
-        toast.style.opacity = '1'; 
-
-       
-        setTimeout(() => {
-            toast.style.opacity = '0'; 
-            setTimeout(() => {
-                toast.style.display = 'none'; 
-            }, 500); 
-        }, 3000); 
-    }
-});
+    });
+    
