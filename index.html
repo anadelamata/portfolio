@@ -190,27 +190,26 @@
 
     <section id="contact">
         <h1 class="header"><span>Contacto ✉</span></h1>
-
-        <form action="https://formspree.io/f/mqakzodd" method="POST">
-
+    
+        <form id="contact-form" action="https://formspree.io/f/mqakzodd" method="POST">
             <div class="input-box">
                 <span>Nombre</span>
-                <input type="text" name="name" placeholder="Escriba su nombre y apellidos">
+                <input type="text" name="name" placeholder="Escriba su nombre y apellidos" required>
             </div>
             <div class="input-box">
                 <span>E-mail</span>
-                <input type="email" name="email" placeholder="Escriba su Email">
+                <input type="email" name="email" placeholder="Escriba su Email" required>
             </div>
-
             <div class="input-box">
                 <span>Asunto</span>
-                <input type="text" name="message" placeholder="Escriba su Mensaje">
+                <input type="text" name="message" placeholder="Escriba su Mensaje" required>
             </div>
-
             <button class="btn" type="submit">Enviar</button>
         </form>
         
+        <div id="toast" style="display:none;">Mensaje enviado con éxito</div>
     </section>
+    
     <div id="toast">Mensaje enviado con éxito</div>
     <footer id="footer">
         <div class="contenidoFooter">

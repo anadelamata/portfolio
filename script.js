@@ -43,10 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function showToast() {
         const toast = document.getElementById('toast');
         toast.style.display = 'block'; // Mostrar el toast
+        toast.style.opacity = '1'; // Asegúrate de que la opacidad sea visible
 
         // Ocultar el toast después de 3 segundos
         setTimeout(() => {
-            toast.style.display = 'none';
-        }, 3000);
+            toast.style.opacity = '0'; // Desvanecer el toast
+            setTimeout(() => {
+                toast.style.display = 'none'; // Ocultar después de desvanecer
+            }, 500); // Tiempo de desvanecimiento
+        }, 3000); // Mostrar durante 3 segundos
     }
 });
