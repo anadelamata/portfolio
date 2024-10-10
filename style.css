@@ -556,16 +556,3 @@ form input:focus{
 
 
 
-#toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #b63535;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: none; /* Comienza oculto */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    transition: opacity 0.5s ease; /* Transición suave */
-}
-
