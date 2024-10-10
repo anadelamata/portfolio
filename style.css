@@ -418,7 +418,7 @@ section{
     border: 2px solid rgb(66, 65, 65);
     border-radius: 0.5em;
     width: 450px; /* Ancho fijo para un mejor control */
-    max-width: 500px; /* Ancho máximo */
+    max-width: 450px; /* Ancho máximo */
 }
 
 .box:hover {
