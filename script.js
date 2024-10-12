@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 //FUNCION RELOJ
 function updateClock() {
     const now = new Date();
