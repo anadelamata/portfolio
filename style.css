@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,47 +8,49 @@
     font-family: 'Poppins';
 }
 
-:root{
+:root {
     --background: rgb(76, 75, 75);
     --second-background: rgb(44, 44, 44);
 
+
 }
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--background);
 }
 
-nav{
+nav {
     position: fixed;
     top: 0;
     width: 100%;
     padding: 2em 15%;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
     background-color: rgba(56, 55, 55, 0.8);
-    backdrop-filter: blur(10px);   /*EFECTO VIDRIO*/
-    z-index: 1000;  /*para qu emi barra de navegación este siempre*/
-
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
-ul{
+
+ul {
     display: flex;
     align-items: center;
     font-size: 1.2em;
-    gap:3em;  /*separo el menu entre ellos*/
+    gap: 3em;
 }
 
-nav ul a{
+nav ul a {
     color: rgb(209, 179, 208);
-    opacity: 0.7; /*Reducir la opacidad para el desplazamiento*/
-    transition: 0.2s ease-in-out; /*transicion para el efecto de desplazamiento*/
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
 }
 
-nav ul a:hover{
+nav ul a:hover {
     opacity: 1;
 }
-.logo{
+
+.logo {
     font-size: 2.5em;
     color: white;
     font-weight: 800;
@@ -56,10 +58,11 @@ nav ul a:hover{
     transition: 0.2s ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
     opacity: 1;
 }
-.btn{
+
+.btn {
     padding: 0.5em 1em;
     color: rgb(211, 206, 206);
     font-weight: 500;
@@ -67,127 +70,146 @@ nav ul a:hover{
     border-radius: 0.5em;
     font-size: 1.1em;
     border: 2px solid white;
-    cursor: pointer; /*hara que cuadno mi cursor pase por encima cambie y asi sabe que es un enlace*/
+    cursor: pointer;
+    /*hara que cuadno mi cursor pase por encima cambie y asi sabe que es un enlace*/
     transition: 0.3s ease-in-out;
 
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(185, 174, 185);
     color: var(--background);
 }
-span{
-    background: linear-gradient(to right, #dfb3df,#e2c796);
-    background-clip: text;/*texto al fondo*/
-    color: transparent;  /*asi podremos ver el degradado a traves del texto porque es transparente*/
+
+span {
+    background: linear-gradient(to right, #dfb3df, #e2c796);
+    background-clip: text;
+    color: transparent;
+    /*asi podremos ver el degradado a traves del texto porque es transparente*/
 }
 
-#menu{
+#menu {
     color: white;
     font-size: 3em;
     display: none;
 
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 5% 15%;
 
 }
 
-#home{
+#home {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap:2em;
+    gap: 2em;
     color: white;
 }
-#home img{
+
+#home img {
     width: 25vw;
     border-radius: 50%;
-    
-    
+
+
 }
-.info-box h1{
-    font-size: 5em;
+
+.info-box h1 {
+    font-size: 3.5em;
     font-weight: 500;
-    
+
 }
-.info-box h3{
-    font-size: 2em;
+
+.info-box h3 {
+    font-size: 1.5em;
     font-weight: 400;
 
 }
-.info-box p{
+
+.info-box p {
+    padding-top: 20px;
+    font-size: 1.2em;
     opacity: 0.7;
 }
-.btn-box{
+
+.btn-box {
     display: flex;
-    gap:1em;
+    gap: 1em;
     padding-top: 20px;
 }
-.btn-box .btn:nth-of-type(2){
+
+.btn-box .btn:nth-of-type(2) {
     background-color: white;
     color: var(--background);
 }
-.btn-box .btn:nth-of-type(2):hover{
+
+.btn-box .btn:nth-of-type(2):hover {
     background-color: var(--background);
-    color:white;
+    color: white;
 }
 
 
 /*SOBRE MI*/
 
 
-#about{
-    
+#about {
+
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap:2em;
+    gap: 2em;
     color: white;
     min-height: 100vh;
-    background-color:  var(--second-background);
-    
+    background-color: var(--second-background);
+
 }
-.about-info h1{
+
+.about-info h1 {
     font-size: 5em;
     font-weight: 500;
-    
+
 }
-.about-info p{
+
+.about-info p {
+    padding-top: 20px;
+    font-size: 1.2em;
     opacity: 0.7;
 
 }
 
-#about img{
+#about img {
     width: 25vw;
     border-radius: 50%;
-    
-    
+
+
 }
 
 
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 20px;
     background-color: var(--background);
 }
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(to bottom,#e28dde,#4dbfd3);
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #e28dde, #4dbfd3);
 }
 
 
 /*Skills*/
-#skills{
+#skills {
     min-height: 100vh;
 }
-#skills h1{
+
+#skills h1 {
     font-size: 5em;
     font-weight: 500;
     text-align: center;
-    
+
 }
 
 .habilidades {
@@ -196,7 +218,7 @@ section{
     height: auto;
     padding-bottom: 8rem;
     position: relative;
-}  
+}
 
 .habilidades h1 {
     display: block;
@@ -211,7 +233,8 @@ section{
 
 .skills-habilidades {
     display: grid;
-    grid-template-columns: repeat(4, 13rem); /* 4 columnas por defecto */
+    grid-template-columns: repeat(4, 13rem);
+    /* 4 columnas por defecto */
     gap: 3rem;
     justify-content: center;
     padding-bottom: 5rem;
@@ -228,7 +251,7 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
-    filter: saturate(70%); 
+    filter: saturate(70%);
     width: 11rem;
     height: 10rem;
 }
@@ -257,19 +280,20 @@ section{
 
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 1024px) {
-    section{
+    section {
         padding: 8em 15%;
 
     }
-    nav.btn{
+
+    nav.btn {
         display: none;
     }
 
-    #menu{
+    #menu {
         display: block;
     }
 
-    .links{
+    .links {
         position: absolute;
         top: 100%;
         right: 0;
@@ -279,11 +303,12 @@ section{
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color: rgba(0,0,0,0.9);
+        background-color: rgba(0, 0, 0, 0.9);
         display: none;
 
     }
-    .links a{
+
+    .links a {
         margin: 2em 0;
         display: block;
         font-size: 1.5em;
@@ -291,44 +316,47 @@ section{
 
     }
 
-    .links.active{
+    .links.active {
         display: block;
     }
 
-    #home h1{
+    #home h1 {
         font-size: 4em;
     }
-    #home h3{
+
+    #home h3 {
         font-size: 2em;
     }
 
-    #home img{
+    #home img {
         width: 24VW;
     }
 
-    #about{
+    #about {
         flex-direction: column;
     }
 
-    #about img{
+    #about img {
         width: 32VW;
     }
-    #about h1{
+
+    #about h1 {
         font-size: 3em;
     }
 
-    #about ul{
+    #about ul {
         font-size: 1em;
     }
+
     .skills-habilidades {
-        grid-template-columns: repeat(3, 13rem); /* Cambia a 3 columnas */
+        grid-template-columns: repeat(3, 13rem);
     }
 
 }
 
 @media (max-width: 768px) {
     .skills-habilidades {
-        grid-template-columns: repeat(2, 13rem); /* Cambia a 2 columnas */
+        grid-template-columns: repeat(2, 13rem);
     }
 
     .tarjetaSkills {
@@ -338,33 +366,36 @@ section{
     .tarjetaSkills img {
         width: 3.5rem;
     }
-    #home h1{
+
+    #home h1 {
         font-size: 2.5em;
     }
-    #home h3{
+
+    #home h3 {
         font-size: 1.5em;
     }
 
-    #home img{
+    #home img {
         width: 32VW;
     }
 
-    #about .skills{
+    #about .skills {
         gap: 3em;
     }
-    #contact .header{
+
+    #contact .header {
         font-size: 3em;
     }
 
-    #contact .input-box span{
+    #contact .input-box span {
         font-size: 1.2em;
     }
 
-    .input-box input{
-        padding:0.5em 1em ;
+    .input-box input {
+        padding: 0.5em 1em;
     }
 
-    footer{
+    footer {
         flex-direction: column;
         gap: 5em;
         align-items: baseline;
@@ -374,7 +405,7 @@ section{
 
 @media (max-width: 480px) {
     .skills-habilidades {
-        grid-template-columns: 1fr; /* Solo 1 columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
     }
 
     .tarjetaSkills {
@@ -400,25 +431,25 @@ section{
 }
 
 .services-container {
-    display: flex; /* Cambiado a Flexbox */
-    flex-wrap: wrap; /* Permitir que las cajas se envuelvan */
-    justify-content: center; /* Centra las cajas horizontalmente */
-    gap: 2em; /* Espacio entre las cajas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
 }
 
 .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centra los elementos dentro de la caja */
+    align-items: center;
     overflow: hidden;
     padding: 3em;
     gap: 2em;
     color: white;
     border: 2px solid rgb(66, 65, 65);
     border-radius: 0.5em;
-    width: 450px; /* Ancho fijo para un mejor control */
-    max-width: 450px; /* Ancho máximo */
+    width: 450px;
+    max-width: 450px;
 }
 
 .box:hover {
@@ -436,82 +467,87 @@ section{
 
 .box img {
     padding-top: 10px;
-    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción */
-    max-height: 200px; /* Ajusta esto según sea necesario */
-    object-fit: cover; /* La imagen se ajusta al contenedor sin deformarse */
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 0.5em;
 }
 
-#services .btn{
-    background-color: rgb(221, 198, 219); /* Color de fondo del botón */
-    color: black; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    font-size: 1em; /* Tamaño de la fuente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
-    margin-top: 10px; /* Espacio arriba del botón */
+#services .btn {
+    background-color: rgb(221, 198, 219);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
 .btn-box {
-    display: flex; /* Utiliza Flexbox para alinear los botones */
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 1em; /* Espacio entre los botones */
-    width: 100%; /* Hace que el contenedor ocupe todo el ancho de la caja */
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
 }
 
 .btnVer {
     padding: 0.5em 1em;
-    color: rgb(29, 28, 29); /* Color del texto */
-    background-color: #d3bed3; /* Color de fondo */
+    color: rgb(29, 28, 29);
+    background-color: #d3bed3;
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 0.5em;
     font-size: 1.1em;
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    cursor: pointer;
     transition: 0.3s ease-in-out;
-    text-decoration: none; /* Elimina el subrayado */
-    display: inline-flex; /* Hace que se comporte como un botón */
-    justify-content: center; /* Centra el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btnGit {
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    cursor: pointer;
 }
 
 .btnGit img {
-    width: 2rem; /* Tamaño del icono en el botón de Git */
-    margin-right: .5rem; /* Espacio entre la imagen y el texto */
+    width: 2rem;
+    margin-right: .5rem;
 }
 
-#contact{
+#contact {
     background-color: var(--background);
 }
-#contact .btn{
+
+#contact .btn {
     color: var(--second-background--background);
 
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2em;
 }
-form.input-box{
+
+form.input-box {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     gap: 1em;
 
 }
-.info-box span{
+
+.info-box span {
     font-size: 1.5em;
 }
-form input{
+
+form input {
     font-size: 1.3em;
     padding: 1em 5em;
     border-radius: 0.5em;
@@ -519,11 +555,11 @@ form input{
     outline: none;
 }
 
-form input:focus{
-    background: rgb(229,229,229);
+form input:focus {
+    background: rgb(229, 229, 229);
 }
 
-#footer{
+#footer {
     background-color: var(--second-background);
 
 }
@@ -537,25 +573,187 @@ form input:focus{
 }
 
 
-.contenidoFooter img{
+.contenidoFooter img {
     width: 30px;
 }
 
-.contenidoFooter h3{
+.contenidoFooter h3 {
     color: #d3bed3;
     font-size: 0.9rem;
-    
+
 }
+
 .telefono {
     display: flex;
-    flex-direction: row; /* Pone los íconos y el texto en fila */
+    flex-direction: row;
     align-items: center;
-    gap: 1rem; /* Añade espacio entre los íconos y el texto */
-    
+    gap: 1rem;
+
 }
-#tel{
+
+#tel {
     width: 25px;
 }
 
 
+/* Estilos generales para la sección de contacto */
+.tituloPregunta {
+    color: rgb(211, 190, 211);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
 
+.rowContacto {
+    display: flex;
+    justify-content: center;
+}
+
+#contact .contacto-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#contact .contacto-item .icon {
+    display: inline-block;
+}
+
+#contact .contacto-item .icon .bx {
+    font-size: 25px;
+    color: #dfb3df;
+}
+
+#contact .contacto-item {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grid-form :nth-child(3) {
+    grid-column: 1 / -1;
+
+
+}
+
+.grid-form :nth-child(4) {
+    grid-column: 1 / -1;
+
+
+}
+
+
+.form-control {
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: rgba(255, 254, 254, 0.911);
+    color: rgb(16, 17, 17);
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+textarea.form-control {
+    height: 120px;
+
+}
+
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(211, 190, 211, 0.5);
+}
+
+.btnEnviar {
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: var(--background);
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.btnEnviar:hover {
+    background-color: rgb(211, 190, 211);
+}
+
+
+
+/*Mi relojito*/
+.clock {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    color: #cc92cc;
+    text-shadow: 0 0 10px #cea8cbcc;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.clock .date {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.clock .time {
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+
+
+/*Scroll flecha*/
+
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: none;
+    background-color: #686565;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: opacity 0.3s;
+}
+
+.scrollToTop:hover {
+    background-color: #e4d0e2cc;
+    color: #1a1919;
+}
+
+@media (max-width: 768px) {
+    .clock {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
